@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
-count = 0
+count = 1
 @app.route('/')
 def home():  # put application's code here
     global count
