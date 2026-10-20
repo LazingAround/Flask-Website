@@ -12,13 +12,13 @@ def internet_protocol_addresses():
     return render_template('internet_protocol_addresses.html')
 @app.route('/data_packets')
 def data_packets():
-    name="John"
+    name="<i>John</i>"
     return render_template('data_packets.html', person=name)
 @app.route('/domain_name_systems')
 def domain_name_systems():
     return render_template('domain_name_systems.html')
 @app.route('/submit', methods=['POST'])
-def submit():
+def counter():
     global count
     count += 1
     return redirect(url_for('home'))

@@ -9,11 +9,11 @@
 <div>
     <h1>Homepage</h1>
     <h2>Select Syllabus Topics</h2>
-    <a href="./data_packets"><p>Data packets</p></a>
-    <a href="./internet_protocol_addresses"><p>Internet protocol addresses (IP address)</p></a>
-    <a href="./domain_name_systems"><p>Domain name systems (DNS)</p></a>
+    <a href="{{ url_for('data_packets') }}"><p>Data packets</p></a>
+    <a href="{{ url_for('internet_protocol_addresses') }}"><p>Internet protocol addresses (IP address)</p></a>
+    <a href="{{ url_for('domain_name_systems') }}"><p>Domain name systems (DNS)</p></a>
 </div>
-<form action="/submit" method="POST">
+<form action="{{ url_for('counter') }}" method="POST">
     <button type="submit">{{ count }}</button>
 </form>
 <details>
