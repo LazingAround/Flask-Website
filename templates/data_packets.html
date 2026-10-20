@@ -6,15 +6,77 @@
     <title>Title</title>
 </head>
 <body>
+<div class="main">
 <h1>Data Packets</h1>
-<p>Data packets are ...</p>
+<p>
+    Data packets are a unit of data packaged as a single unit that travels from on device to another along a network path like the internet.
+    <br>Data packets enable the transmission of information by breaking raw data into smaller, more manageable pieces that reassemble into readable data at the destination.
+    <br>Data packets are used in <a href="{{url_for('internet_protocol_addresses')}}">Internet Protocol <abbr>(IP)</abbr></a> transmissions.
+    <br>Data packets have 3 parts, a header, payload and trailer.
+</p>
+<table>
+    <caption>
+        Parts of a data packet
+    </caption>
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Header</th>
+            <th scope="col">Payload</th>
+            <th scope="col">Trailer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Details</th>
+            <td>Contains information including source IP address, port-numbers, destination and its sequence in the data</td>
+            <td>Contains the actual data being transferred</td>
+            <td>Informs the destination that it has reached the end of its travel as well as end/error checking</td>
+        </tr>
+    </tbody>
+</table>
+<h2>Switching</h2>
+<p>
+    An important element of data packets is switching, a phrase used to describe the method of routing the data packets from the source to the destination. The Internet and most modern data networks make use of packet switching as opposed to circuit switching.
+</p>
+<table>
+    <caption>Packet switching vs Circuit switching</caption>
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Packet switching</th>
+            <th scope="col">Circuit switching</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Details</th>
+            <td>Data packets travel independently from each other and can take different network paths to the destination</td>
+            <td>Data packets follows the same path as contiguous data flow</td>
+        </tr>
+    <tr>
+        <th scope="row">Examples</th>
+        <td>Most modern networks, Internet, emails</td>
+        <td>Voice communications, traditional telephone networks</td>
+    </tr>
+    <tr>
+        <th scope="row">Advantages</th>
+        <td>Efficient and flexible transmission of data and very effective at handling large scale loads</td>
+        <td>A dedicated path is open for the data, allowing for low latency, predictable performance and consistent bandwidth</td>
+    </tr>
+    <tr>
+        <th scope="row">Disadvantages</th>
+        <td>Limited in scalability and reliance on a dedicated open path for data transfer</td>
+        <td>Packets can get congested and experience delays, performance is not guaranteed and is complex implementation-wise</td>
+    </tr>
 
-{% if person %}
-  <h1>Hello {{ person }}!</h1>
-{% else %}
-  <h1>Hello, World!</h1>
-{% endif %}
+    </tbody>
+</table>
 <button onclick="window.history.back()">Go Back</button>
 <button onclick="window.location.href='/'">Home</button>
+</div>
+<div class="extra">
+    <img width=100%" alt="Data packets are composed of three components, header, payload and trailer. Header indicates origin and destination information for the packet and controls the information. Payload contains the data being sent. Trailer detects for any errors and ensures the data's integrity and validity." src="../static/stuff/network-packet-structure.jpg">
+</div>
 </body>
 </html>

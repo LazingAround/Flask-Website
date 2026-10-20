@@ -18,3 +18,37 @@ abbr{
     height:100px;
     width:100px
 }
+
+table{
+    border: 2px solid slategray;
+}
+thead{
+    background-color: antiquewhite;
+}
+th, td{
+    border: 1px solid dimgray;
+    width: 150px
+}
+th{
+    background-color: antiquewhite;
+}
+caption{
+    border: 1px double gray;
+}
+body{
+    min-height: 100% ;
+    height:auto;
+    margin:0;
+    display: flex;}
+.main{
+    height:auto;
+    min-height: 100%;
+    background-color: aliceblue;
+}
+html {
+    height: 100%;
+}
+
+.extra{
+    width:50%
+}

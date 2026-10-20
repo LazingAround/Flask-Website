@@ -1,12 +1,16 @@
 from flask import Flask, render_template, redirect, url_for
-
+import random
 app = Flask(__name__)
 
 count = 0
 @app.route('/')
 def home():  # put application's code here
     global count
-    return render_template('home.html',count=count)
+    display = False
+    rand = random.randint(1, 5)
+    if rand == 1:
+        display = True
+    return render_template('home.html',count=count,display=display)
 @app.route('/internet_protocol_addresses')
 def internet_protocol_addresses():
     return render_template('internet_protocol_addresses.html')

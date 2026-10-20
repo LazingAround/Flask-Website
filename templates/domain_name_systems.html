@@ -6,13 +6,24 @@
     <title>Domain Name Systems</title>
 </head>
 <body>
+<div class="main">
 <h1>Domain Name Systems</h1>
 <p>
-    <abbr>DNS</abbr> (Domain Name Systems) that facilitates the translation of human-readable domain name into <a href="{{url_for('internet_protocol_addresses')}}">IP addresses</a>, enabling computer to communicate over the internet.
-    <br>Goon with da spoon
-    <abbr title="Domain Name Systems">DNS</abbr>
+    <abbr>DNS</abbr> (Domain Name Systems) that facilitates the translation of human-readable domain name into <a href="{{url_for('internet_protocol_addresses')}}"><abbr title="Internet Protocol">IP</abbr> addresses</a>, enabling computer to communicate over the internet.
+    <abbr title="Domain Name System">DNS</abbr> connects a domain name to its corresponding IP address, allowing browsers and devices to locate and communicate with servers on the Internet.
 </p>
+    <h2>Process</h2>
+    <ol>
+        <li><b>User Input:</b> The user enters a domain name into the browser</li>
+        <li><b>Local Cache Check</b> The browser or <abbr>OS</abbr> (operating system) checks its cache for a stored IP address corresponding to the domain name</li>
+        <li><b><abbr title="Domain Name System">DNS</abbr> Resolver Query:</b> If not, the request is sent to a <abbr title="Domain Name System">DNS</abbr> resolver</li>
+        <li><b>Root Server Query:</b> The resolver queries a root server which directs to the correct <abbr>TLD</abbr> (top-level-domain) server</li>
+        <li><b><abbr title="Top Level Domain">TLD</abbr> Server Response:</b> The <abbr title="Top Level Domain">TLD</abbr> server directs the resolver to the domain's authoritative server</li>
+        <li><b>Authoritative Server Response:</b> The authoritative server returns the actual <abbr title="Internet Protocol">IP</abbr> address</li>
+        <li><b>Final Response:</b> The resolver sends the <abbr title="Internet Protocol">IP</abbr> address back to the user, and the browser connects to the server. The IP is also cached locally to access the website faster in the future.</li>
+    </ol>
 <button onclick="window.history.back()">Go Back</button>
 <button onclick="window.location.href='/'">Home</button>
+</div>
 </body>
 </html>

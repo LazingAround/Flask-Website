@@ -6,6 +6,7 @@
     <title>Home</title>
 </head>
 <body>
+<div class="main">
 <div>
     <h1>Homepage</h1>
     <h2>Select Syllabus Topics</h2>
@@ -18,9 +19,13 @@
 </form>
 <details>
     <summary>Summary</summary>
-    <p>b1</p>
-    <p>b2</p>
+    <p>This is a flask project designed to create notes for Software as well as acting as practice with working with HTML for the <i>Programming for the Web</i> module.</p>
+    {% if display == True %}
+        <img alt="easter egg" src="../static/stuff/fanum_broccoli.gif">
+    {% endif %}
 </details>
+
 <div class="block"></div>
+</div>
 </body>
 </html>
