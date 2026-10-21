@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <meta charset="UTF-8">
+    <title>{{ number }} Times Table</title>
+</head>
+<body>
+<div class="main">
+<h1>{{ number }} Times Table</h1>
+<table>
+<thead>
+<tr>
+    <th scope="col">Num1</th>
+    <th>×</th>
+    <th scope="col">Num2</th>
+    <th>=</th>
+    <th scope="col">Product</th>
+</tr>
+</thead>
+<tbody>
+    {% for row in timestable %}
+        <tr>
+            <td>{{ row.number }}</td>
+            <td></td>
+            <td>{{ row.multiplier }}</td>
+            <td></td>
+            <td>{{ row.answer }}</td>
+
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+<button onclick="window.history.back()">Go Back</button>
+<button onclick="window.location.href='/'">Home</button>
+</div>
+</body>
+</html>
